@@ -6,10 +6,10 @@
 
 ## Installation
 
-To build the `btcq` CLI tool, run the following command in `src` directory of the project:
+To build the `btcq` CLI tool, run the following command in the root directory of the project:
 
 ```bash
-go build -o btcq
+go build -C src -o ../btcq
 ```
 
 This will generate an executable named `btcq` in your directory. After building the project, you can run the executable with:
@@ -21,11 +21,19 @@ This will generate an executable named `btcq` in your directory. After building 
 Alternatively, you can move the binary to a directory that's included in your `PATH` to run it directly. Example:
 
 ```sh
-mv btcq /usr/local/bin/
+mv btcq ~/.local/bin
 btcq
 ```
 
 This will allow you to execute the tool from anywhere in your terminal.
+
+## Run Tests
+
+To run the all the unit tests in the project:
+
+```bash
+go test -C src ./...
+```
 
 ## Usage
 
@@ -43,15 +51,15 @@ You can use `btcq` with various command-line flags to retrieve specific informat
 
 You can use either the long or short flags to get percentage changes:
 
--   `-percent-change-15m` or `-pc-15m` : Get the 15-minute percent change in Bitcoin price.
--   `-percent-change-30m` or `-pc-30m` : Get the 30-minute percent change in Bitcoin price.
--   `-percent-change-1h` or `-pc-1h` : Get the 1-hour percent change in Bitcoin price.
--   `-percent-change-6h` or `-pc-6h` : Get the 6-hour percent change in Bitcoin price.
--   `-percent-change-12h` or `-pc-12h` : Get the 12-hour percent change in Bitcoin price.
--   `-percent-change-24h` or `-pc-24h` : Get the 24-hour percent change in Bitcoin price.
--   `-percent-change-7d` or `-pc-7d` : Get the 7-day percent change in Bitcoin price.
--   `-percent-change-30d` or `-pc-30d` : Get the 30-day percent change in Bitcoin price.
--   `-percent-change-1y` or `-pc-1y` : Get the 1-year percent change in Bitcoin price.
+-   `-pc-15m` : Get the 15-minute percent change in Bitcoin price.
+-   `-pc-30m` : Get the 30-minute percent change in Bitcoin price.
+-   `-pc-1h` : Get the 1-hour percent change in Bitcoin price.
+-   `-pc-6h` : Get the 6-hour percent change in Bitcoin price.
+-   `-pc-12h` : Get the 12-hour percent change in Bitcoin price.
+-   `-pc-24h` : Get the 24-hour percent change in Bitcoin price.
+-   `-pc-7d` : Get the 7-day percent change in Bitcoin price.
+-   `-pc-30d` : Get the 30-day percent change in Bitcoin price.
+-   `-pc-1y` : Get the 1-year percent change in Bitcoin price.
 
 ### Examples
 
@@ -70,10 +78,10 @@ You can use either the long or short flags to get percentage changes:
 -   Get the 1-hour percent change in Bitcoin price:
 
     ```bash
-    ./btcq -percent-change-1h
+    ./btcq -pc-1h
     ```
 
--   Get the 7-day percent change in Bitcoin price using the short flag:
+-   Get the 7-day percent change in Bitcoin price:
 
     ```bash
     ./btcq -pc-7d
