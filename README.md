@@ -9,7 +9,7 @@
 To build the `btcq` CLI tool, run the following command in the root directory of the project:
 
 ```bash
-go build -C src -o ../btcq
+make
 ```
 
 This will generate an executable named `btcq` in your directory. After building the project, you can run the executable with:
@@ -32,7 +32,7 @@ This will allow you to execute the tool from anywhere in your terminal.
 To run the all the unit tests in the project:
 
 ```bash
-go test -C src ./...
+make test
 ```
 
 ## Usage
