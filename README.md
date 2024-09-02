@@ -4,7 +4,7 @@
 
 ## Installation
 
-To build the `btcq` CLI tool, run the following command in the root directory of the project:
+To build the `btcq` CLI tool, run the following command in `src` directory of the project:
 
 ```bash
 go build -o btcq
