@@ -66,25 +66,25 @@ You can use either the long or short flags to get percentage changes:
 -   Get the current Bitcoin price:
 
     ```bash
-    ./btcq
+    btcq
     ```
 
 -   Get all available Bitcoin data:
 
     ```bash
-    ./btcq -all-data
+    btcq -all-data
     ```
 
 -   Get the 1-hour percent change in Bitcoin price:
 
     ```bash
-    ./btcq -pc-1h
+    btcq -pc-1h
     ```
 
 -   Get the 7-day percent change in Bitcoin price:
 
     ```bash
-    ./btcq -pc-7d
+    btcq -pc-7d
     ```
 
 ## API Reference
