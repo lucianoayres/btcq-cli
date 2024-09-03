@@ -4,6 +4,8 @@
 
 `btcq` is a command-line tool for querying Bitcoin data from a cryptocurrency API. This tool allows you to fetch various pieces of information about Bitcoin, including the current price, trading volume, market capitalization, all-time high price, and percentage changes over different time windows.
 
+![btcq_demo](https://github.com/user-attachments/assets/180b8196-d1d2-44b9-95f3-19deeed4d808)
+
 ## Installation
 
 To build the `btcq` CLI tool, run the following command in the root directory of the project:
